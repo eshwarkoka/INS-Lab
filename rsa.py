@@ -1,4 +1,5 @@
 #rsa
+
 def gcd(a,b):
     if a==b:
         return a
@@ -11,21 +12,21 @@ q=int(input('Enter q value: '))
 n=p*q
 phi=(p-1)*(q-1)
 
-#gcd(d,phi)=1
-d=1
+#gcd(e,phi)=1
+e=1
 for i in range(2,100):
     if gcd(i,phi)==1:
-        d=i
-        break
-print('d value: '+str(d))
-
-#(e*d)mod(phi)=1
-e=1
-for i in range(1,100):
-    if (i*d)%phi==1:
         e=i
         break
 print('e value: '+str(e))
+
+#(d*e)mod(phi)=1
+d=1
+for i in range(1,100):
+    if (i*e)%phi==1:
+        d=i
+        break
+print('d value: '+str(d))
 
 msg=input('Enter message to be encrypted: ')
 #encryption -> (M**e)mod(n)=C
