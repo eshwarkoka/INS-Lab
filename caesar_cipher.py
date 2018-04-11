@@ -15,10 +15,12 @@ for each in msg:
         if a>90:
             a-=26
         enc+=chr(a)
-    else: #a-z
+    elif 97<=a<=122: #a-z
         a+=d
         if a>122:
             a-=26
+        enc+=chr(a)
+    else: #other
         enc+=chr(a)
 print('Encrypted text: '+str(enc))
 
@@ -31,9 +33,11 @@ for each in enc:
         if a<65:
             a+=26
         dec+=chr(a)
-    else:
+    elif 97<=a<=122:
         a-=d
         if a<97:
             a+=26
+        dec+=chr(a)
+    else:
         dec+=chr(a)
 print('Decrypted text: '+str(dec))

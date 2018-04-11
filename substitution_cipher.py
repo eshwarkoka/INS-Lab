@@ -20,7 +20,7 @@ print('Encrypted text: '+str(enc))
 
 #Decryption
 dec=''
-for each in enc:
+for each in enc: #same code as above
     a=ord(each)
     if 65<=a<=77:
         dec+=chr(a+13)
