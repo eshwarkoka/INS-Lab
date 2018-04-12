@@ -1,6 +1,6 @@
 #caesar_cipher
 
-print('Positive number indicates left shift\nNegative number indicates right shift')
+print('Positive number indicates right shift\nNegative number indicates left shift')
 d=int(input('Enter a number to shift to: '))
 msg=input('Enter message: ')
 if d<0:
